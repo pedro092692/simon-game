@@ -15,6 +15,13 @@ function audiodObj(color){
     return new Audio('./sounds/' + color + '.mp3');
 }
 
+//get clicked buttons
+$('.btn').on('click', function(){
+    var btnId = this.id;
+    userClickedPatter.push(btnId)
+    console.log(userClickedPatter);
+});
+
 $(document).on('keydown', function(event){
     if(event.key === 't'){
         var selectedColor = $('.' + randomChosenColour);
